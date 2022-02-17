@@ -1,8 +1,10 @@
 let slideIndex = 0;
 let el = document.getElementsByClassName('slideshow-elements')[0];
+let userFugged = false;
 
 // Next/previous controls
-function plusSlides(n) {
+function plusSlides(n, fugged_by_user=true) {
+    userFugged = fugged_by_user;
     const oldIndex = slideIndex;
     slideIndex += n;
     if (slideIndex < 0)
@@ -17,4 +19,9 @@ function showSlides(newIndex, oldIndex) {
         `translate${newIndex}`);
 }
 
-setInterval(plusSlides, 5000, 1);
+setInterval(() => {
+    if (!userFugged)
+        plusSlides(1, false);
+    else
+        userFugged = false;
+}, 5000);
