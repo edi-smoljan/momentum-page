@@ -217,6 +217,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(20vw, 30rem));
     width: 100%;
     column-gap: 1.5rem;
+    justify-content: center;
 }
 
 #services-detailed h2 {
