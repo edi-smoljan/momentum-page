@@ -243,7 +243,6 @@ footer address > p > span {
 }
 
 footer address > p:nth-child(2) {
-    word-wrap: break-word;
+    word-break: break-all;
     justify-self: flex-end;
-    padding-right: 1rem;
 }
