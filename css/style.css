@@ -104,7 +104,7 @@ section {
 }
 
 section > .content {
-    width: min(85vw, 50rem);
+    width: min(75vw, 70rem);
     margin-inline: auto;
 }
 
@@ -147,6 +147,23 @@ section > .content {
 
 .slideshow-elements > article {
     flex: 1 0 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.slideshow-elements > article > .img-container {
+    flex: 1;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.img-container > img {
+    max-width:100%;
+    max-height:100%;
 }
 
 .slideshow-container > a.prev,
@@ -206,9 +223,29 @@ section > .content {
     font-size: smaller;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 30rem));
-    width: 100%;
     column-gap: 1.5rem;
+    row-gap: 2rem;
     justify-content: center;
+    overflow: visible;
+}
+
+#services-detailed > .content > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+
+#services-detailed > .content > article.visible {
+    animation: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#services-detailed > .content > article img {
+    height: 10rem;
+    margin-bottom: 2rem;
 }
 
 #services-detailed h2 {
@@ -245,4 +282,60 @@ footer address > p > span {
 footer address > p:nth-child(2) {
     word-break: break-all;
     justify-self: flex-end;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(0, 50%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (min-width:1158px) {
+    #services-detailed > .content > article.visible {
+        animation: none;
+    }
+
+    #services-detailed > .content > article.even.visible {
+        animation: fade-in-left;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    #services-detailed > .content > article.odd.visible {
+        animation: fade-in-right;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fade-in-right {
+        from {
+            opacity: 0;
+            transform: translate(75%, 0%);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+    
+    @keyframes fade-in-left {
+        from {
+            opacity: 0;
+            transform: translate(-75%, 0%);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
 }
