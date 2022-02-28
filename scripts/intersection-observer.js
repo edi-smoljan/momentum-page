@@ -1,7 +1,7 @@
 let options = {
     root: null,
     rootMargin: '0px',
-    threshold: window.visualViewport.width >= 1158 ? 0.66 : 0.05
+    threshold: 0.5
 }
 
 console.log(window.visualViewport.width)

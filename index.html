@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html>
     <head>
         <meta charset="utf8">
         <meta name="description" content="Momentum obrt za računalno programiranje i savjetovanje pruža usluge
@@ -12,17 +12,15 @@
         <meta property="og:title" content="MOMENTUM obrt za računalno programiranje i savjetovanje">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Momentum</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./images/icon48.png" type="image/x-icon">
         <!-- third-generation iPad with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/icon144.png" >
         <!-- iPhone with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/icon114.png" >
         <!-- first- and second-generation iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/icon72.png" >
         <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-        <link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
-        <!-- basic favicon -->
-        <link rel="icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+        <link rel="apple-touch-icon-precomposed" href="./images/icon57.png" >
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -30,51 +28,82 @@
             <div>
                 <div>
                     <h1>MOMENTUM</h1>
-                    <span>obrt za računalno programiranje i savjetovanje</span>
                 </div>
                 <div class="language-selector">
-                    <div><img src="images/tobias-Flag-of-the-United-Kingdom.svg" alt="UK flag" title="English"></div>
-                    <div><img src="images/Anonymous-Flag-of-croatia.svg" alt="Croatian flag" title="Hrvatski"></div>
+                    <div><img src="images/tobias-Flag-of-the-United-Kingdom.svg" alt="UK flag" title="English" onclick="selectLanguage('en')"></div>
+                    <div><img src="images/Anonymous-Flag-of-croatia.svg" alt="Croatian flag" title="Hrvatski" onclick="selectLanguage('hr')"></div>
             </div>
         </nav>
         <main>
-            <section id="services-summary">
+            <section id="services-summary" aria-labelledby="services">
                 <div class="content">
-                    <h2>Usluge:</h2>
+                    <h2 id="services">
+                        <span lang="hr">Usluge:</span>
+                        <span lang="en">Services:</span>
+                    </h2>
                     <div class="slideshow-container">
                         <div class="slideshow-elements-overlay"><div class="slideshow-elements translate0">
                             <article>
                                 <div class="img-container"><img src="images/web-app-icon.svg" alt=""></div>
-                                <h3>Desktop i web aplikacije</h3>
-                                <p>izrada, postavljanje i održavanje postojećih desktop i web aplikacija</p>
+                                <h3>
+                                    <span lang="hr">Desktop i web aplikacije</span>
+                                    <span lang="en">Desktop and web apps</span>
+                                </h3>
+                                <p>
+                                    <span lang="hr">izrada, postavljanje i održavanje postojećih desktop i web aplikacija</span>
+                                    <span lang="en">app development, app deployment and maintenance of exisitng desktop and web apps</span></p>
                             </article>
 
                             <article>
                                 <div class="img-container"><img src="images/ai-icon-custom.svg" alt=""></div>
-                                <h3>Strojno učenje</h3>
-                                <p>odabir arhitekture modela prilagođenog problemu, učenje i primjena</p>
+                                <h3>
+                                    <span lang="hr">Strojno učenje</span>
+                                    <span lang="en">Machine learning</span>
+                                </h3>
+                                <p>
+                                    <span lang="hr">odabir arhitekture modela prilagođenog problemu, učenje i primjena</span>
+                                    <span lang="en">machine learning model architecture selection, model training and inference</span>
+                                </p>
                             </article>
 
                             <article>
                                 <div class="img-container"><img src="images/database icon.svg" alt=""></div>
-                                <h3>Baze podataka</h3>
-                                <p>postavljanje željene baze, izrada podatkovne sheme i metoda upravljanja podataka za vaše potrebe</p>
+                                <h3>
+                                    <span lang="hr">Baze podataka</span>
+                                    <span lang="en">Databases</span>
+                                </h3>
+                                <p>
+                                    <span lang="hr">postavljanje željene baze, izrada podatkovne sheme i metoda upravljanja podataka za vaše potrebe</span>
+                                    <span lang="en">desired database server set up, custom data schema and data management processes design</span>
+                                </p>
                             </article>
 
                             <article>
                                 <div class="img-container"><img src="images/data vis icon custom.svg" alt=""></div>
-                                <h3>Analiza i vizualizacija podataka</h3>
-                                <p>izrada interaktivnih izvještaja koristeći vaše podatke</p>
+                                <h3>
+                                    <span lang="hr">Analiza i vizualizacija podataka</span>
+                                    <span lang="en">Data analysis and visulization</span>
+                                </h3>
+                                <p>
+                                    <span lang="hr">izrada interaktivnih izvještaja koristeći vaše podatke</span>
+                                    <span lang="en">development of interactive reports based on your data</span>
+                                </p>
                             </article>
 
                             <article>
                                 <div class="img-container"><img src="images/consulting icon custom.svg" alt=""></div>
-                                <h3>Savjetovanje</h3>
-                                <p>Savjetovanje na području računalne znanosti, izrada tehničkih i projektnih dokumentacija</p>
+                                <h3>
+                                    <span lang="hr">Savjetovanje</span>
+                                    <span lang="en">Consulting</span>
+                                </h3>
+                                <p>
+                                    <span lang="hr">savjetovanje na području računalne znanosti, izrada tehničkih i projektnih dokumentacija</span>
+                                    <span lang="en">consulting on the field of computer science, techical and project documentation preparation</span>
+                                </p>
                             </article>
                         </div></div>
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
                     </div>
                 </div>
                 
@@ -82,69 +111,160 @@
 
             <section id="message" class="colors-invert">
                 <div class="content">
-                    <p>Desetljeće iskustva u svim gorenavedenim područjima garancija je dobro obavljenog posla.<br>
-                    Na pravom ste mjestu ako želite ostvariti svoje projektne ideje!</p>
+                    <p>
+                        <span lang="hr">Desetljeće iskustva u svim gorenavedenim područjima garancija je dobro obavljenog posla.<br>
+                         Na pravom ste mjestu ako želite ostvariti svoje projektne ideje!</span>
+                        <span lang="en">A decade of experience in the aforementioned fields is a guarantee of a job well done.<br>
+                            You are on the right place if you want to realize your project ideas!</span>
+                    </p>
                 </div>
             </section>
 
-            <section id="services-detailed">
+            <section id="services-detailed" aria-labelledby="experience">
+                <h2 id="experience">
+                    <span lang="hr">Iskustvo</span>
+                    <span lang="en">Experience</span>
+                </h2>
                 <div class="content">
                     <article class="even">
                         <img src="images/web-app-icon.svg" alt="">
-                        <h2>Desktop i web aplikacije</h2>
+                        <h2>
+                            <span lang="hr">Desktop i web aplikacije</span>
+                            <span lang="en">Desktop and web apps</span>
+                        </h2>
                         <ul>
-                            <li>razvijanje back-enda u NodeJS, Pythonu, C# (ASP.NET), Javi</li>
-                            <li>razvijanje front-enda u HTML-u, Angular-u, JQuery-u</li>
-                            <li>razvijanje progresivnih web aplikacija</li>
-                            <li>korištenje servisa koji omogućavaju pohranu podataka na cloudu, prijavu i registraciju korisnika, prijenosa videa</li>
-                            <li>objavljivanje web aplikacija na javno dostupne mrežne adrese (Docker)</li>
-                            <li>održavanje i nadogradnja aplikacija</li>
+                            <li>
+                                <span lang="hr">razvijanje back-enda u NodeJS, Pythonu, C# (ASP.NET), Javi</span>
+                                <span lang="en">back-end development in NodeJS, Python, C# (ASP.NET), Java</span>
+                            </li>
+                            <li>
+                                <span lang="hr">razvijanje front-enda u HTML-u, Angular-u, JQuery-u</span>
+                                <span lang="en">front-end development in HTML, Angular, JQuery</span>
+                            </li>
+                            <li>
+                                <span lang="hr">korištenje servisa koji omogućuju pohranu podataka na cloudu, prijavu i registraciju korisnika, prijenosa videa</span>
+                                <span lang="en">use of services that enable data storage on the cloud, user login and registration, video streaming</span>
+                            </li>
+                            <li>
+                                <span lang="hr">objavljivanje web aplikacija na javno dostupne mrežne adrese (Docker)</span>
+                                <span lang="en">deployment of web apps on public network addresses (Docker)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">održavanje i nadogradnja aplikacija</span>
+                                <span lang="en">app maintenance and upgrading</span>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="odd">
                         <img src="images/ai-icon-custom.svg" alt="">
-                        <h2>Strojno učenje</h2>
+                        <h2>
+                            <span lang="hr">Strojno učenje</span>
+                            <span lang="en">Machine learning</span>
+                        </h2>
                         <ul>
-                            <li>primjena stohastičkih metoda optimizacije (npr. evolucijski algoritmi i ostale metaheuristike)</li>
-                            <li>iskustvo u modelima dubokog učenja (neuronske mreže, konvolucijske mreže, LSTM-ovi, transformeri)</li>
-                            <li>primjena modela računalnog vida (semantička segmentacija, detekcija objekata)</li>
-                            <li>iskustvo u radu s ostalim modelima strojnog učenja</li>
-                            <li>postavljanje naučenih modela na udaljena računala i ugradnja modela u podatkovni proces</li>
+                            <li>
+                                <span lang="hr">primjena stohastičkih metoda optimizacije (npr. evolucijski algoritmi i ostale metaheuristike)</span>
+                                <span lang="en">application of stohastic optimisation methods (e.g. evolutional algorithms and other metaheuristics)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">iskustvo u modelima dubokog učenja (neuronske mreže, konvolucijske mreže, LSTM-ovi, transformeri)</span>
+                                <span lang="en">experience in deep learning models (deep neural networks, convolutional networks, LSTMs, transformers)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">primjena modela računalnog vida (semantička segmentacija, detekcija objekata)</span>
+                                <span lang="en">application of computer vision models (semantic segmentation, object detection)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">iskustvo u radu s ostalim modelima strojnog učenja (xGBoost, CATBoost, SVM)</span>
+                                <span lang="en">work experience in using other machine learning models (xGBoost, CATBoost, SVM)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">postavljanje naučenih modela na udaljena računala i ugradnja modela u podatkovni proces</span>
+                                <span lang="en">deployment of trained models to remote computers and model's integration in the data process</span>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="even">
                         <img src="images/database icon.svg" alt="">
-                        <h2>Baze podataka</h2>
+                        <h2>
+                            <span lang="hr">Baze podataka</span>
+                            <span lang="en">Databases</span>
+                        </h2>
                         <ul>
-                            <li>izbor prikladne relacijske ili nerelacijske baze podataka (MySQL, PostgreSQL, Microsoft MSSQL, Azure Cosmos, MongoDB)</li>
-                            <li>postavljanje udaljenog servera sa odabranom bazom podataka</li>
-                            <li>izrada podatkovnih shema potrebnih za rad aplikacija</li>
-                            <li>uspostavljanje administracijskog sučelja prema bazi podataka</li>
-                            <li>postavljanje procesa sigurnosnih kopija baze podataka</li>
+                            <li>
+                                <span lang="hr">izbor prikladne relacijske ili nerelacijske baze podataka (MySQL, PostgreSQL, Microsoft MSSQL, Azure Cosmos, MongoDB)</span>
+                                <span lang="en">choosing the appropriate relational ili non-relational database (MySQL, PostgreSQL, Microsoft MSSQL, Azure Cosmos, MongoDB)</span>
+                            </li>
+                            <li>
+                                <span lang="hr">postavljanje udaljenog servera sa odabranom bazom podataka</span>
+                                <span lang="en">setting up a remote database server</span>
+                            </li>
+                            <li>
+                                <span lang="hr">izrada podatkovnih shema potrebnih za rad aplikacija</span>
+                                <span lang="en">implementation of a data schema required for app operation</span>
+                            </li>
+                            <li>
+                                <span lang="hr">uspostavljanje administracijskog sučelja prema bazi podataka</span>
+                                <span lang="en">establishing of an administrative interface towards the database</span>
+                            </li>
+                            <li>
+                                <span lang="hr">postavljanje procesa sigurnosnih kopija baze podataka</span>
+                                <span lang="en">database backup processes setup</span>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="odd">
                         <img src="images/data vis icon custom.svg" alt="">
-                        <h2>Analiza i vizualizacija podataka</h2>
+                        <h2>
+                            <span lang="hr">Analiza i vizualizacija podataka</span>
+                            <span lang="en">Data analysis and visulization</span>
+                        </h2>
                         <ul>
-                            <li>analiza varijabli i određivanje njihove značajnosti</li>
-                            <li>izrada izvještaja u Tableau ili Microsoft Power BI</li>
-                            <li>vizualizacija podataka u pythonu koristeći matplotlib, seaborn i plotly</li>
-                            <li>izrada prilagođenih interaktivnih web vizaulizacija koristeći bokeh i dash</li>
+                            <li>
+                                <span lang="hr">analiza varijabli i određivanje njihove značajnosti</span>
+                                <span lang="en">feature analysis and determination of their significance</span>
+                            </li>
+                            <li>
+                                <span lang="hr">izrada izvještaja u Tableau ili Microsoft Power BI</span>
+                                <span lang="en">interactive report creation in Tableau or Microsoft Power BI</span>
+                            </li>
+                            <li>
+                                <span lang="hr">vizualizacija podataka u pythonu koristeći matplotlib, seaborn i plotly</span>
+                                <span lang="en">data visualization in python using matplotlib, seaborn and plotly</span>
+                            </li>
+                            <li>
+                                <span lang="hr">izrada prilagođenih interaktivnih web vizaulizacija koristeći bokeh i dash</span>
+                                <span lang="en">custom interactive data visualizations that are hosted on web design using bokeh and dash</span>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="even">
                         <img src="images/consulting icon custom.svg" alt="">
-                        <h2>Savjetovanje</h2>
+                        <h2>
+                            <span lang="hr">Savjetovanje</span>
+                            <span lang="en">Consulting</span>
+                        </h2>
                         <ul>
-                            <li>savjetovanje na području računalne znanosti</li>
-                            <li>priprema i strukturiranje programskih projekata</li>
-                            <li>izrada projektnih dokumentacija i dokumentiranje organizacijskih procesa</li>
-                            <li>praćenje rada na projektu</li>
+                            <li>
+                                <span lang="hr">savjetovanje na području računalne znanosti</span>
+                                <span lang="en">consulting on the field of computer science</span>
+                            </li>
+                            <li>
+                                <span lang="hr">priprema i strukturiranje programskih projekata</span>
+                                <span lang="en">preparation and structuring of software projects</span>
+                            </li>
+                            <li>
+                                <span lang="hr">izrada projektnih dokumentacija i dokumentiranje organizacijskih procesa</span>
+                                <span lang="en">project documentation writing and documenting organizational processes</span>
+                            </li>
+                            <li>
+                                <span lang="hr">praćenje rada na projektu</span>
+                                <span lang="en">monitoring project work</span>
+                            </li>
                         </ul>
                     </article>
                 </div>
@@ -152,13 +272,13 @@
 
             <section id="final-message" class="colors-invert">
                 <div class="content">
-                <p>Tu smo kako bi olakšali vaše software projekte.<br>
-                    <a href="mailto:momentum.vodnjan@gmail.com?subject=Website%20contact:">Kontaktirajte nas!</a></p>
+                <p><span lang="hr">Tu smo kako bi olakšali vaše software projekte.</span><span lang="en">We're here to facilitate your software projects.</span><br>
+                    <a href="mailto:momentum.vodnjan@gmail.com?subject=Website%20contact:"><span lang="hr">Kontaktirajte nas!</span><span lang="en">Contact us!</span></a></p>
                 </div>
             </section>
         </main>
         
-        <footer class="colors-invert">
+        <footer class="colors-invert" id="info">
             <div class="content">
                 <address>
                     <p>
@@ -166,7 +286,7 @@
                         <span>vl. Edi Smoljan</span>
                         <span>Pian 31</span>
                         <span>52215 Vodnjan</span>
-                        <span>Hrvatska</span>
+                        <span lang="hr">Hrvatska</span><span lang="en">Croatia</span>
                     </p>
                     <p>
                     <span>Tel: +385 95 908 4493</span>
@@ -175,6 +295,7 @@
                 </address>
             </div>
         </footer>
+        <script src="scripts/language-selection.js"></script>
         <script src="scripts/slideshow.js"></script>
         <script src="scripts/intersection-observer.js"></script>
     </body>
