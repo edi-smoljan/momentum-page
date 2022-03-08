@@ -2,6 +2,10 @@
     --clr-primary: #f7eef5;
     --clr-secondary: #5a5a5a;
     --clr-link-static: #e6cbff;
+    
+    scroll-snap-type: y mandatory;
+    scroll-padding: 6rem;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -29,10 +33,6 @@ body {
     font-family: "Poppins", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
     overflow-x: hidden;
-}
-
-main {
-    margin-top: 6rem;
 }
 
 h1 {
@@ -100,10 +100,34 @@ nav .language-selector img:hover {
 
 main {
     width: 100%;
+    margin-top: 6rem;
+}
+
+#services-summary {
+    scroll-snap-align: start;
+}
+
+#services-detailed {
+    scroll-snap-align: start;
+}
+
+#message {
+    scroll-snap-align: start;
+}
+
+.article-container {
+    scroll-snap-align: start;
+}
+
+#services-detailed .article-container:first-child {
+    scroll-snap-align: unset;
+}
+
+footer {
+    scroll-snap-align: end;
 }
 
 section {
-    margin-bottom: 2rem;
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -236,21 +260,21 @@ section > .content {
     overflow: visible;
 }
 
-#services-detailed > .content > article {
+#services-detailed > .content article {
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
 }
 
-#services-detailed > .content > article.visible {
+#services-detailed > .content article.visible {
     animation: fade-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
-#services-detailed > .content > article img {
+#services-detailed > .content article img {
     height: 10rem;
     margin-bottom: 2rem;
 }
@@ -304,18 +328,22 @@ footer address > p:nth-child(2) {
 }
 
 @media screen and (min-width:1158px) {
-    #services-detailed > .content > article.visible {
+    #message {
+        scroll-snap-align: unset;
+    }
+
+    #services-detailed > .content article.visible {
         animation: none;
     }
 
-    #services-detailed > .content > article.even.visible {
+    #services-detailed > .content article.even.visible {
         animation: fade-in-left;
         animation-duration: 1s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
     }
 
-    #services-detailed > .content > article.odd.visible {
+    #services-detailed > .content article.odd.visible {
         animation: fade-in-right;
         animation-duration: 1s;
         animation-timing-function: ease-out;
